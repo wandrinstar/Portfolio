@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Porfolio With Bootstrap</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+            <img class="img-responsive" src="images/logo.jpg" alt="udacity logo">
+        </div>
+        <div class="col-md-6 text-uppercase text-right">
+          <h1 class="large-font">Martin D. Edson</h1>
+          <h3>Programming Apprentice</h3>
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-md-12">
+              <hr>
+          </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <img class="img-responsive img-width" src="images/code.jpg" alt="code image">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="light-grey-font">Featured Work</h2>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <img class="img-responsive" src="images/nano.jpg" alt="nanodegree website thumbnail" data-toggle="modal" data-target="#notes">
+          <h3 class="project-description">Notes</h3>
+          <p><a href="https://github.com/wandrinstar/udacity-nano-intro-programming">https://github.com/wandrinstar/udacity-nano-intro-programming</a></p>
+        </div>
+        <div class="col-md-4">
+          <img class="img-responsive" src="images/portfolio.jpg" alt="udacity course thumbnail" data-toggle="modal" data-target="#portfolio">
+          <h3 class="project-description">Portfolio</h3>
+          <p> <a href="https://github.com/wandrinstar/portfolio">https://github.com/wandrinstar/portfolio</a></p>
+        </div>
+        <div class="col-md-4">
+          <img class="img-responsive" src="images/slot-sim.jpg" alt="thumbnail of slot game" data-toggle="modal" data-target="#sim">
+          <h3 class="project-description">Sim</h3>
+          <p><a href="https://github.com/wandrinstar/sims">https://github.com/wandrinstar/sims</a></p>
+        </div>
+      </div>
+    </div>
+  <!-- Modal -->
+    <div class="modal fade" id="notes" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title project-description" id="myModalLabel">NOTES</h4>
+          </div>
+          <div class="modal-body">
+            <img class="img-responsive" src="images/nano.jpg">
+            <br>
+            <p>Introduction to Programming was the first Nanodegree I completed with Udacity. It introduced topics such as
+            Web Protocols, HTML, CSS, Javascript, Python, Object-Oriented Programming, Servers, Databases and APIs.</p>
+            <p>Our main project involved building a website which displayed our class notes and allowed users to comment.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="portfolio" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title project-description" id="myModalLabel">PORTFOLIO</h4>
+          </div>
+          <div class="modal-body">
+            <img class="img-responsive" src="images/portfolio.jpg">
+            <br>
+            <p>This is portfolio website which displays my projects. It was given as an assignment in Udacity's Front-End
+            Nanodegree program.</p>
+            <p>It was implemented with bootstrap.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="sim" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title project-description" id="myModalLabel">SIM</h4>
+          </div>
+          <div class="modal-body">
+            <img class="img-responsive" src="images/slot-sim.jpg">
+            <br>
+            <p>This is a simulator. It models a popular online slot game, takes various parameters from the user,
+            and returns figures such as the theoretical return to player and risk of ruin. It also can be used for
+            various other casino games such as roulette</p>
+            <p>It was implemented in Python but should be interpreted with PyPy to reach passable speeds.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
