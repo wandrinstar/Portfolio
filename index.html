@@ -2,32 +2,33 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Porfolio With Bootstrap</title>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link href='http://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
-    <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:100,300" rel="stylesheet">
+    <script src="js/jquery-1.11.3.js" async></script>
+    <script src="js/bootstrap.min.js" async></script>
 </head>
   <body>
     <div class="container">
-      <div class="row">
-        <div class="col-md-6">
+      <header class="row">
+        <div class="col-md-6 disappear-mobile logo">
             <img class="img-responsive" src="images/logo.jpg" alt="udacity logo">
         </div>
-        <div class="col-md-6 text-uppercase text-right">
+        <div class="col-md-6 text-uppercase text-right move-left-mobile">
           <h1 class="large-font">Martin D. Edson</h1>
           <h3>Programming Apprentice</h3>
         </div>
-      </div>
+      </header>
       <div class="row">
           <div class="col-md-12">
               <hr>
           </div>
       </div>
-      <div class="row">
+      <div class="row disappear-mobile">
         <div class="col-md-12">
-          <img class="img-responsive img-width" src="images/code.jpg" alt="code image">
+          <img class="img-responsive" src="images/code.jpg" alt="code image">
         </div>
       </div>
       <div class="row">
@@ -35,33 +36,44 @@
           <h2 class="light-grey-font">Featured Work</h2>
         </div>
       </div>
-      <div class="row text-center">
-        <div class="col-md-4">
-          <img class="img-responsive" src="images/nano.jpg" alt="nanodegree website thumbnail" data-toggle="modal" data-target="#notes">
+      <section class="row text-center move-left-mobile center-tablet">
+        <div class="col-md-4 border-mobile">
+          <img class="img-responsive img-round" src="images/nano.jpg" alt="nanodegree website thumbnail" data-toggle="modal" data-target="#notes">
           <h3 class="project-description">Notes</h3>
           <p><a href="https://github.com/wandrinstar/udacity-nano-intro-programming">https://github.com/wandrinstar/udacity-nano-intro-programming</a></p>
         </div>
-        <div class="col-md-4">
-          <img class="img-responsive" src="images/portfolio.jpg" alt="udacity course thumbnail" data-toggle="modal" data-target="#portfolio">
+        <div class="col-md-4 border-mobile">
+          <img class="img-responsive img-round" src="images/portfolio.jpg" alt="udacity course thumbnail" data-toggle="modal" data-target="#portfolio">
           <h3 class="project-description">Portfolio</h3>
           <p> <a href="https://github.com/wandrinstar/portfolio">https://github.com/wandrinstar/portfolio</a></p>
         </div>
-        <div class="col-md-4">
-          <img class="img-responsive" src="images/slot-sim.jpg" alt="thumbnail of slot game" data-toggle="modal" data-target="#sim">
+        <div class="col-md-4 border-mobile">
+          <img class="img-responsive img-round" src="images/slot-sim.jpg" alt="thumbnail of slot game" data-toggle="modal" data-target="#sim">
           <h3 class="project-description">Sim</h3>
           <p><a href="https://github.com/wandrinstar/sims">https://github.com/wandrinstar/sims</a></p>
         </div>
+      </section>
+      <div class="row disappear-mobile">
+          <div class="col-md-12">
+              <hr>
+          </div>
       </div>
+      <footer>
+        <div class="row">
+          <div class="col-md-6">m.edson373@gmail.com</div>
+          <div class="col-md-6 move-right-laptop">+1-713-234-6764</div>
+        </div>
+      </footer>
     </div>
   <!-- Modal -->
-    <div class="modal fade" id="notes" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal fade" id="notes" tabindex="-1" role="dialog" aria-labelledby="notesModal" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h4 class="modal-title project-description" id="myModalLabel">NOTES</h4>
+            <h4 class="modal-title project-description" id="notesModal">NOTES</h4>
           </div>
           <div class="modal-body">
-            <img class="img-responsive" src="images/nano.jpg">
+            <img class="img-responsive" src="images/nano.jpg" alt="nanodegree website thumbnail">
             <br>
             <p>Introduction to Programming was the first Nanodegree I completed with Udacity. It introduced topics such as
             Web Protocols, HTML, CSS, Javascript, Python, Object-Oriented Programming, Servers, Databases and APIs.</p>
@@ -74,14 +86,14 @@
       </div>
     </div>
     <!-- Modal -->
-    <div class="modal fade" id="portfolio" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal fade" id="portfolio" tabindex="-1" role="dialog" aria-labelledby="portfolioModal" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h4 class="modal-title project-description" id="myModalLabel">PORTFOLIO</h4>
+            <h4 class="modal-title project-description" id="portfolioModal">PORTFOLIO</h4>
           </div>
           <div class="modal-body">
-            <img class="img-responsive" src="images/portfolio.jpg">
+            <img class="img-responsive" src="images/portfolio.jpg" alt="udacity course thumbnail">
             <br>
             <p>This is the portfolio website which you are current on! It displays my projects. It was given as an assignment in Udacity's Front-End
             Nanodegree program.</p>
@@ -94,14 +106,14 @@
       </div>
     </div>
     <!-- Modal -->
-    <div class="modal fade" id="sim" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal fade" id="sim" tabindex="-1" role="dialog" aria-labelledby="simModal" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h4 class="modal-title project-description" id="myModalLabel">SIM</h4>
+            <h4 class="modal-title project-description" id="simModal">SIM</h4>
           </div>
           <div class="modal-body">
-            <img class="img-responsive" src="images/slot-sim.jpg">
+            <img class="img-responsive" src="images/slot-sim.jpg" alt="thumbnail of slot game">
             <br>
             <p>This simulator models a popular online slot game, takes various parameters from the user,
             and returns figures such as the theoretical return to player and risk of ruin. It also can be used for
